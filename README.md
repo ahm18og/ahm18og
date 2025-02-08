@@ -1,1 +1,1 @@
-Unprofessional codes and repos are dumped here.
+Unprofessional and effortless codes and repos are dumped here.
