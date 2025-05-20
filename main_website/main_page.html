@@ -1,92 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>ahmad mustafa</title>
+
+	<link rel="icon" href="icon.png">
+
+	<script>
+		function randomizeTitle(title) {
+			let index = Math.floor(Math.random() * title.length);
+			let char = title[index];
+
+			let newChar = Math.random() < 0.5 ? char.toUpperCase() : char.toLowerCase();
+
+			return title.substring(0, index) + newChar + title.substring(index + 1);
+		}
+
+		function updateTitle() {
+			document.title = randomizeTitle(document.title);
+			requestAnimationFrame(updateTitle);
+		}
+		
+		requestAnimationFrame(updateTitle);
+	</script>
+
 </head>
+
 <body>
-	
+
 	<div>
 		<h1><a href="main_page.html">ahmad mustafa</a></h1>
+		<img src="icon.png" style="width: 400px; height: 400px;">
 	</div>
-	
+
 	<div>
 		<h2>about me</h2>
 		<p>i love coding ! i use java for game development, and c for compiler design</p>
 		<p>im also learning opengl and graphics engineering using lwjgl</p>
 		<p>and im also learning designing a compiler, and im using c for this</p>
 	</div>
-	
+
 	<div>
 		<h2>socials</h2>
 		<a href="https://www.instagram.com/ahm18og">instagram</a>
 		<a href="https://www.tiktok.com/@ahm18og">tiktok</a>
 	</div>
-	
+
 	<div>
 		<h2>epicalles</h2>
 		<div>
-			
-			<textarea
-			id="input_area"
-			placeholder="enter something"
-			style="
+
+			<textarea id="input_area" placeholder="enter something" style="
 				font-family: 'Courier New';
 				font-size: 30px;
 				width: 400px;
 				height: 100px;
 				resize: none;
 				"></textarea>
-			
+
 			<br><br>
-			
+
 			<button style="
 				font-size: 20px;
-				"
-			onclick="changeText()"
-			>just press me</button>
-			
-			<button
-			style="
+				" onclick="changeText()">just press me</button>
+
+			<button style="
 				font-size: 20px;
-				"
-			onclick="clearText()"
-			>
-			press me to clear
-		</button>
-		
-		<br><br>
-		
-		<textarea
-			id="output_text"
-			placeholder="and it will be here"
-			readonly="true"
-			style="
+				" onclick="clearText()">
+				press me to clear
+			</button>
+
+			<br><br>
+
+			<textarea id="output_text" placeholder="and it will be here" readonly="true" style="
 				font-family: 'Courier New';
 				font-size: 30px;
 				width: 400px;
 				height: 100px;
 				resize: none;
-			"
-			></textarea>
-			
+			"></textarea>
+
 			<script>
 				function changeText() {
 					const inputText = document.getElementById('input_area').value;
 					document.getElementById('output_text').value = inputText;
 				}
-				
+
 				function clearText() {
 					document.getElementById('input_area').value = ''
 					document.getElementById('output_text').value = ''
 				}
 			</script>
-			
+
 		</div>
 	</div>
-	
+
 	<div>
 		<h2>yo</h2>
 		<div style="font-family: 'Courier New';">
@@ -124,6 +135,7 @@
 			<p></p>
 		</div>
 	</div>
-	
+
 </body>
+
 </html>
